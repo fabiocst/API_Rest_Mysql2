@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 //pegamos a entidade em si dessa forma usando .Livro
 const Livro = require('../models').Livro;
+const Autor = require('../models').Autor;
 //Busca Livro (GET)
 router.get('/', async (req, res) => {
     const livros = await Livro.findAll();
